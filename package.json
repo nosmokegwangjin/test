@@ -1,0 +1,13 @@
+{
+  "name": "leaflet-kakao-map",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "display-map": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "leaflet": "^1.7.1",
+    "leaflet.markercluster": "^1.4.1"
+  }
+}
