@@ -1,12 +1,14 @@
 {
-  "name": "test",
+  "name": "kakao-map-marker-example",
   "version": "1.0.0",
-  "description": "",
+  "description": "Example project for displaying markers on KakaoMap using GitHub Secrets",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node index.js"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC"
+  "dependencies": {
+    "axios": "^0.21.1",
+    "kakao-maps-js": "^4.0.0",
+    "supercluster": "^7.1.2"
+  }
 }

@@ -1,4 +1,4 @@
-name: Build and Deploy
+name: Display Markers on KakaoMap
 
 on:
   push:
@@ -6,24 +6,22 @@ on:
       - main
 
 jobs:
-  deploy:
+  build:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout Repository
-        uses: actions/checkout@v2
+    - name: Checkout Repository
+      uses: actions/checkout@v2
 
-      - name: Set up Node.js
-        uses: actions/setup-node@v3
-        with:
-          node-version: 14
+    - name: Set up Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: 14
 
-      - name: Install Dependencies
-        run: npm install
+    - name: Install Dependencies
+      run: npm install
 
-      - name: Deploy to GitHub Pages
-        run: |
-          npm run build
-          npm run deploy
-        env:
-          KAKAO_MAP_API_KEY: ${{ secrets.KAKAO_MAP_API_KEY }}
+    - name: Display Markers on KakaoMap
+      run: npm start
+      env:
+        KAKAO_MAP_API_KEY: ${{ secrets.KAKAO_MAP_API_KEY }}
